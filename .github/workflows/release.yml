@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
         with:
-          profile: minimal
-          toolchain: stable
+          toolchain: nightly
+          override: true
 
       # TODO
       # - name: Build Changelog 🏗
