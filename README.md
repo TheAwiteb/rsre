@@ -23,7 +23,7 @@ Tool to rename file/directory
 </div>
 
 ## Requirements
- * [Rust](https://www.rust-lang.org/) >= 1.56
+ * [Rust](https://www.rust-lang.org/) Nightly
 
 ## Install
 ### With Cargo
