@@ -1,0 +1,15 @@
+[package]
+name = "rsre"
+version = "0.1.0"
+edition = "2021"
+authors = ["Awiteb <https://github.com/TheAwiteb>"]
+categories = ["command-line-utilities"]
+license = "MIT OR Apache-2.0"
+description = "Tool to rename file/directory"
+homepage = "https://github.com/TheAwiteb/rsre"
+documentation = "https://github.com/TheAwiteb/rsre"
+repository = "https://github.com/TheAwiteb/rsre"
+readme = "README.md"
+
+
+[dependencies]
