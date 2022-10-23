@@ -13,6 +13,9 @@ readme = "./README.md"
 
 [dependencies]
 
+[features]
+debug = []
+
 [profile.release]
 strip = true  # Automatically strip symbols from the binary.
 opt-level = "s"
