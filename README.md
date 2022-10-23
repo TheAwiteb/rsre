@@ -2,8 +2,11 @@
 
 <div align="center">
 
-# **R**u**s**t **re**namer `rsre`
-Tool to rename file/directory
+# `R`u`s`t `re`namer
+Rsre it's Tool to rename file/directory<br>
+<sub>
+Zero dependencies 👀
+</sub>
 
 <a href="https://www.gnu.org/licenses/">
   <img src="https://img.shields.io/badge/license-GPLv3-orange.svg" alt="License">
