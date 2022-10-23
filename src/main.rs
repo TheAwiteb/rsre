@@ -16,8 +16,11 @@
 
 mod actions;
 mod errors;
+mod macros;
 mod parser;
 mod utils;
+
+use debug as de;
 use errors::{Error as RsreError, Statuses};
 use std::{env, ffi::OsString};
 
@@ -29,6 +32,8 @@ fn main() -> Statuses<(), RsreError> {
         .map_err(|err| {
             RsreError::FileSystem(err.into_string().expect("Cannot convert error to String"))
         })?;
+    de! {println!("Args: {:?}", args)};
     let action = parser::parse(args)?;
+    de! {println!("Action: {:?}", action)};
     action.run().into()
 }

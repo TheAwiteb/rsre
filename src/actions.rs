@@ -1,5 +1,7 @@
 use crate::errors::Result as RsreResult;
 use crate::utils::rename;
+#[cfg(feature = "debug")]
+use std::fmt::Debug;
 use std::path::PathBuf;
 
 const USAGE: &str = r#"
@@ -10,6 +12,7 @@ OPTIONS:
     -h, --help     Print help information
     -V, --version  Print version information"#;
 
+#[cfg_attr(feature = "debug", derive(Debug))]
 pub enum Actions {
     Help,
     Version,
