@@ -12,23 +12,28 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#![feature(try_trait_v2, try_trait_v2_residual, const_trait_impl)]
+#![feature(try_trait_v2, try_trait_v2_residual)]
 
 mod actions;
 mod errors;
+mod macros;
 mod parser;
 mod utils;
-use std::{env, ffi::OsStr};
 
+use debug as de;
 use errors::{Error as RsreError, Statuses};
+use std::{env, ffi::OsString};
 
 fn main() -> Statuses<(), RsreError> {
-    let action = parser::parse(
-        env::args_os()
-            .skip(1)
-            .into_iter()
-            .collect::<Vec<_>>()
-            .join(OsStr::new(" ")),
-    )?;
+    let args = env::args_os()
+        .map(OsString::into_string)
+        .skip(1)
+        .collect::<Result<Vec<String>, OsString>>()
+        .map_err(|err| {
+            RsreError::FileSystem(err.into_string().expect("Cannot convert error to String"))
+        })?;
+    de! {println!("Args: {:?}", args)};
+    let action = parser::parse(args)?;
+    de! {println!("Action: {:?}", action)};
     action.run().into()
 }
