@@ -3,7 +3,7 @@
 <div align="center">
 
 # `R`u`s`t `re`namer
-Rsre it's Tool to rename file/directory<br>
+Rsre it's tool to rename file/directory<br>
 <sub>
 Zero dependencies 👀
 </sub>
