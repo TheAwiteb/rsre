@@ -2,14 +2,14 @@
 
 <div align="center">
 
-# `R`u`s`t `re`namer
+# **R**u**s**t **re**namer
 Rsre it's tool to rename file/directory<br>
 <sub>
 Zero dependencies 👀
 </sub>
 
 <a href="https://www.gnu.org/licenses/">
-  <img src="https://img.shields.io/badge/license-GPLv3-orange.svg" alt="License">
+  <img src="https://img.shields.io/badge/license-MIT/APACHE-orange.svg" alt="License">
 </a>
 <a href="https://rust-lang.org/">
   <img src="https://img.shields.io/badge/Made%20with-Rust-orange.svg" alt="Rust">
@@ -58,17 +58,19 @@ USAGE:
     rsre FILE/DIRECTORY NEW_FULL_NAME
 
 OPTIONS:
-    -h, --help           Print help information
-    -V, --version        Print version information
+    -h, --help     Print help information
+    -V, --version  Print version information
 ```
 
 ## Example
+### Long path
 ```
 # with mv
 mv ../../foo/bar/bat/foo.txt ../../foo/bar/bat/bar.txt
 # with rsre
 rsre ../../foo/bar/bat/foo.txt bar.txt
 ```
+### Single file
 ```
 rsre bar.rs foo.rs
 ```
