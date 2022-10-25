@@ -31,11 +31,16 @@ Zero dependencies 👀
 ## Install
 ### With Cargo
 ```bash
+# Install nightly rust
+rustup toolchain install nightly
+# Install Rsre with nightly rust
 cargo +nightly install rsre
 rsre --version
 ```
 ### From source
 ```bash
+# Install nightly rust
+rustup toolchain install nightly
 # Clone the repo
 git clone https://github.com/theawiteb/rsre.git
 # Change directory to it
