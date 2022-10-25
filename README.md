@@ -31,7 +31,7 @@ Zero dependencies 👀
 ## Install
 ### With Cargo
 ```bash
-cargo install rsre
+cargo +nightly install rsre
 rsre --version
 ```
 ### From source
@@ -41,7 +41,7 @@ git clone https://github.com/theawiteb/rsre.git
 # Change directory to it
 cd rsre
 # Build it with cargo
-cargo build --release
+cargo +nightly build --release
 # Move the binary to `/usr/bin` (Unix like system) (need permission to move in `/usr/bin`)
 # You can change binary directory to `~/.cargo/bin` if its exists and it's in `$PATH`
 sudo mv ./target/release/rsre /usr/bin/rsre
