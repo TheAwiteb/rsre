@@ -1,6 +1,6 @@
 [package]
 name = "rsre"
-version = "0.2.3"
+version = "0.2.4"
 edition = "2021"
 authors = ["Awiteb <https://github.com/TheAwiteb>"]
 categories = ["command-line-utilities"]
